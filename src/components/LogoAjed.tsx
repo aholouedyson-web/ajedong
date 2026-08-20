@@ -15,7 +15,7 @@ export default function LogoAjed({ className = "", width = 64, height = 64, aria
         src="/images/logo-ajed.png"
         alt={ariaLabel}
         fill
-        className="object-contain"
+        className="object-cover"
         priority
       />
     </div>

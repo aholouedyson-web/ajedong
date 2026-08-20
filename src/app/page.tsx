@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import LogoAjed from "@/components/LogoAjed";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 function AnimatedSection({

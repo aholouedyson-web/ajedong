@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import LogoAjed from "@/components/LogoAjed";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,13 +45,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-full bg-white shadow-md overflow-hidden group-hover:scale-105 transition-transform duration-300 relative">
-              <Image
-                src="/images/logo-ajed.png"
-                alt="Logo AJED"
-                fill
-                className="object-cover"
-                priority
-              />
+              <LogoAjed width={48} height={48} />
             </div>
             <div className="hidden sm:block">
               <span
@@ -95,7 +89,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/contact#benevole"
-              className="text-sm font-semibold px-4 py-2 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              className={`text-sm font-semibold px-4 py-2 rounded-full border-2 transition-all duration-300 ${
+                scrolled
+                  ? "border-primary text-primary hover:bg-primary hover:text-white"
+                  : "border-white/40 text-white hover:bg-white hover:text-primary"
+              }`}
             >
               Bénévolat
             </Link>

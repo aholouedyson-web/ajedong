@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import LogoAjed from "@/components/LogoAjed";
 
 export default function Footer() {
   return (
@@ -17,12 +17,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center relative overflow-hidden shadow-sm">
-                <Image
-                  src="/images/logo-ajed.png"
-                  alt="Logo AJED"
-                  fill
-                  className="object-cover"
-                />
+                <LogoAjed width={56} height={56} />
               </div>
               <div>
                 <div className="font-bold text-lg text-white" style={{ fontFamily: "var(--font-display)" }}>
