@@ -215,13 +215,18 @@ export default function Home() {
             <div className="relative">
               <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-2xl animate-float">
                 <div className="w-56 h-56 lg:w-72 lg:h-72 rounded-full bg-white/20 flex items-center justify-center">
-                  <Image
-                    src="/images/logo-ajed.png"
-                    alt="AJED - Association Des Jeunes Étoiles de Demain"
-                    width={240}
-                    height={240}
-                    className="w-44 h-44 lg:w-60 lg:h-60 object-contain drop-shadow-2xl"
-                  />
+                  <svg width="240" height="240" viewBox="0 0 200 200" className="w-44 h-44 lg:w-60 lg:h-60 object-contain drop-shadow-2xl">
+                    <defs>
+                      <radialGradient id="g1hero" cx="35%" cy="30%">
+                        <stop offset="0%" stopColor="#22c55e" />
+                        <stop offset="100%" stopColor="#14532d" />
+                      </radialGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="92" fill="url(#g1hero)" />
+                    <polygon points="100,40 112,86 160,86 120,112 132,158 100,132 68,158 80,112 40,86 88,86" fill="#d02626" opacity="0.95" />
+                    <path d="M120 110c6-8 18-10 28-6 4 2 6 6 6 10 0 8-8 18-22 20-10 1-24-2-32-12" fill="#2b9bf0" opacity="0.95" />
+                    <path d="M50 120c20 18 46 24 74 6" stroke="#0ea05b" strokeWidth={6} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
+                  </svg>
                 </div>
               </div>
               {/* Orbiting dots */}

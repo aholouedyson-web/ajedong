@@ -45,13 +45,23 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-full bg-white shadow-md overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-              <Image
-                src="/images/logo-ajed.png"
-                alt="AJED Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
-              />
+              {/* SVG logo component */}
+              <svg width="40" height="40" viewBox="0 0 200 200" className="w-10 h-10">
+                <defs>
+                  <radialGradient id="g1nav" cx="35%" cy="30%">
+                    <stop offset="0%" stopColor="#22c55e" />
+                    <stop offset="100%" stopColor="#14532d" />
+                  </radialGradient>
+                </defs>
+                <circle cx="100" cy="100" r="92" fill="url(#g1nav)" />
+                <polygon
+                  points="100,40 112,86 160,86 120,112 132,158 100,132 68,158 80,112 40,86 88,86"
+                  fill="#d02626"
+                  opacity="0.95"
+                />
+                <path d="M120 110c6-8 18-10 28-6 4 2 6 6 6 10 0 8-8 18-22 20-10 1-24-2-32-12" fill="#2b9bf0" opacity="0.95" />
+                <path d="M50 120c20 18 46 24 74 6" stroke="#0ea05b" strokeWidth={6} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
+              </svg>
             </div>
             <div className="hidden sm:block">
               <span
