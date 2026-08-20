@@ -86,13 +86,13 @@ export default function Gallery() {
       {/* Hero */}
       <div className="hero-gradient pt-32 pb-20 text-center text-white">
         <div className="max-w-3xl mx-auto px-6">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-semibold text-green-200 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-semibold text-white mb-4">
             Galerie
           </span>
           <h1 className="text-5xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
             Nos Projets en Images
           </h1>
-          <p className="text-green-100/70 text-lg">
+          <p className="text-white/70 text-lg">
             Chaque image raconte une histoire de solidarité, d&apos;espoir et d&apos;engagement collectif.
             Découvrez nos actions à travers cette galerie vivante.
           </p>
@@ -108,8 +108,8 @@ export default function Gallery() {
               onClick={() => setActive(cat)}
               className={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex-shrink-0 ${
                 active === cat
-                  ? "bg-green-700 text-white shadow-md shadow-green-700/30"
-                  : "bg-gray-100 text-gray-600 hover:bg-green-50 hover:text-green-700"
+                  ? "bg-primary text-white shadow-md shadow-primary/30"
+                  : "bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary"
               }`}
             >
               {cat}
@@ -130,7 +130,7 @@ export default function Gallery() {
             {filtered.map((item, i) => (
               <AnimSection key={item.id} delay={i * 60}>
                 <button
-                  className="w-full break-inside-avoid group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block cursor-pointer bg-green-50"
+                  className="w-full break-inside-avoid group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block cursor-pointer bg-neutral-100"
                   onClick={() => setLightbox(item)}
                   aria-label={`Voir ${item.title}`}
                 >
@@ -172,8 +172,8 @@ export default function Gallery() {
       {/* Video section */}
       <AnimSection className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <div className="mb-4 text-sm font-semibold uppercase tracking-widest text-green-700">Vidéos</div>
-          <h2 className="text-4xl font-bold text-green-900 mb-4" style={{ fontFamily: "var(--font-display)" }}>
+          <div className="mb-4 text-sm font-semibold uppercase tracking-widest text-secondary">Vidéos</div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: "var(--font-display)" }}>
             Revivez nos événements
           </h2>
           <p className="text-gray-600 mb-10">
@@ -196,7 +196,7 @@ export default function Gallery() {
                 </div>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-7 h-7 text-green-700 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-7 h-7 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
@@ -238,7 +238,7 @@ export default function Gallery() {
               />
             </div>
             <div className="p-6">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700 mb-2">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary mb-2">
                 {lightbox.category}
               </span>
               <h3 className="text-xl font-bold text-gray-900" style={{ fontFamily: "var(--font-display)" }}>
